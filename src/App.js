@@ -2,6 +2,7 @@ import React, {Component,Fragment} from 'react';
 import Son from './Son'
 import AddNumber from './AddNumber'
 import Time from './Time'
+import CommentDom from './CommentDom'
 import './index.css'
 class App extends Component {
   constructor(props) {
@@ -63,6 +64,7 @@ class App extends Component {
         <ul>{this.getItem()}</ul>
         <AddNumber />
         <Time />
+        <CommentDom />
       </Fragment>
     );
   }
