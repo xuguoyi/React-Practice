@@ -1,8 +1,12 @@
 import React, {Component,Fragment} from 'react';
+
 import Son from './Son'
 import AddNumber from './AddNumber'
 import Time from './Time'
 import CommentDom from './CommentDom'
+import ColorDiv from './ColorDiv'
+import MultiComponents from './MultiComponents'
+import LifeCycle from './LifeCycle'
 import './index.css'
 class App extends Component {
   constructor(props) {
@@ -39,12 +43,18 @@ class App extends Component {
     )
   }
   render() {
+    let xxx = {
+      background: '#f00',
+      color: '#fff'
+    }
     return (
       // 替代div，可不渲染div
       <Fragment>
         <div>
+          {/* 三种css的写法 */}
           <input className="input-style" value={this.state.inputValue} onChange={(e)=>{this.inputChange(e)}}/>
-          <button style={{background: '#f00', color: '#fff'}} onClick={()=>{this.btnClick()}}>Add</button>
+          {/* <button style={{background: '#f00', color: '#fff'}} onClick={()=>{this.btnClick()}}>Add</button> */}
+          <button style={xxx} onClick={()=>{this.btnClick()}}>Add</button>
         </div>
         {/* 三种写法 */}
         <ul>
@@ -65,6 +75,9 @@ class App extends Component {
         <AddNumber />
         <Time />
         <CommentDom />
+        <ColorDiv color="#ffa737"/>
+        <MultiComponents />
+        <LifeCycle />
       </Fragment>
     );
   }
